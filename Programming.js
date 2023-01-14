@@ -321,6 +321,62 @@ var ans=false;
 * Number are writen without quotes.
 * if you put a number in quotes, it will be treated as a text string.
 
+</head>
+<body>
+    <script>
+        var roll;
+        roll=101;
+        document.write(roll);
+        var name="Ranjeet kumar"
+        document.write(name);
+    </script>
+</body>
+</html>   
+
+if you re-declare a javaScript variable, it will not lose its value.
+
+var name="Ranjeet kumar";
+var name;
+document.write(name);
+out put will be Ranjeet kumar
+
+* The statements are executed, one by one, in the same order as they are
+  written.
+* JavaScript programs (and javascript statements) are often called
+  javaScript code.
+* Semicolons separate JavaScript statements.
+* Ending statements with semicolon is not required, but highly recommended.
+* JavaScript ignores multiple spaces.
+* Use line Break (Enter Key). 
+
+===============================
+Comment
+===============================
+1). Single Line Comment
+2). Multi Line Comment
+
+>Single Line Comment
+ Single line comments start with //.
+ Text between // and the end of the line will be ignored by javascript.
+
+ //you can assign any type of value.
+
+ var imvalue =101;
+
+ var imvalue =101;    // assign any type of value
+
+>Multi Line Comment
+Multi-line comments start with (/*) and end with
+Any text between (/*) and  will be ignored by javascript.
+
+/*comment here
+
+Adding // in front of a code line changes the code lines from an
+executable line to a Comment.
+var imvalue=101;
+//var imvalue=101;
+*/
+
 
 
 
