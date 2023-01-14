@@ -250,6 +250,17 @@ Rules:-
 6). Can't use reserved keywords
 
 
+Note point:-
+--------------
+Keywords or Reserved Words
+1).var   2).Delete  3).for 4).let  5).Break  6).Super  7).Void  8).Case
+9).do    10).Static  11).Function  12).New  13).Switch  14).While  
+15).interface 16).Catch 17).else 18).if 19).package 20).finally 21).this
+22).with 23).class 24).enum 25).default 26).implements 27).private
+28). throw 29).yield 30).typeof 31).const 32).export 33).import 34).protected
+35).return 36).true 37).continue 38).extends 39).in 40).instanceof 41).public
+42).try 43).debugger 44).false
+
 
 
 
