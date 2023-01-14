@@ -262,6 +262,67 @@ Keywords or Reserved Words
 42).try 43).debugger 44).false
 
 
+===========================
+Data Type in javaScript
+===========================
+In javaScript we do not need specify type of the variable because it is
+dynamically used by javaScript engine.
+We can use var data type. it can hold any type of data like String, Number,
+Boolean etc.
+
+Primitive Data Type                     Non-Primitive Data Type
+     String                                    Object
+     Number                                    Array
+     Boolean                                   RegExp
+     Undefined
+     Null
+
+======================================
+Declaring Variable
+======================================
+var roll; |
+var name; | These all are undefined.
+var price;|
+
+A variable declared without a value will have the value undefined.
+
+note point:- yanha pe koi bhi variable store kar sakte hai kisi bhi 
+             data type me.
+
+===================
+Initializing Variable
+===================
+Var roll;
+roll=101;
+
+var name;
+name="geeky shows";
+
+var price;
+price=125.36;
+
+var roll=101;
+
+var name="geeky shows";
+
+var price =125.36;
+
+roll=101;
+
+name="geeky shows";
+
+price=125.36
+
+var ans=true;
+
+var ans=false;
+
+* String are written inside double or single quotes.
+* Number are writen without quotes.
+* if you put a number in quotes, it will be treated as a text string.
+
+
+
 
 
 
