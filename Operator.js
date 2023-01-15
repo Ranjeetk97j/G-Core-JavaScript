@@ -45,7 +45,110 @@ JavaSript Operators
        var c=a>b
        document.write(c);
     </script>
-     
+==============================
+>Logical Operators
+============================
+(&&) Logical And (5<2) && (5>3)  False
+(||) Logical Or  (5<2) || (5>3)  True
+(!)  Logical Not !(5<2)          True
+
+Operand 1      Operand2      Result
+  True           True         True
+  True           False        False
+  False          True         False
+  False          False        False
+
+=======================
+Bitwise Operators
+=======================
+
+Operator  Meaning
+<<        Shift the bits to left
+>>        Shift the bits to right
+~         Bitwise inversion (one's complement)
+&         Bitwise logical AND
+|         Bitwise logical OR
+^         Bitwise exclusive Or
+
+Operand 1      Operand2      Result(Operand 1 & Operand2)
+  True           True         True
+  True           False        False
+  False          True         False
+  False          False        False
+
+Operand 1      Operand2      Result(Operand 1 & Operand2)
+    1              1           1
+    1              0           0
+    0              1           0
+    0              0           0
+
+Operand 1      Operand2      Result(Operand 1 | Operand2)
+  True           True         True
+  True           False        True
+  False          True         True
+  False          False        False
+
+Operand 1      Operand2      Result(Operand 1 | Operand2)
+    1              1           1
+    1              0           1
+    0              1           1
+    0              0           0
+
+(Bitwise NOT~)    
+Operand          Result
+ True 1          False 0
+ False 0         True  1
+
+============================ 
+>Assignment Operators
+===========================
+Operator      Example      Equivalent Expression
+  =           M = 10            M=10
+  +=          M +=10            M=M+10
+  -=          M -=10            M=M-10
+  *=          M *=10            M=M*10
+  /=          M /=10            M=M/10
+  %=          M %=10            M=M%10
+  <<=         A<<=b             A=A<<B     
+  >>=         A>>=b             A=A>>b
+  >>>=        A>>>=b            A=A>>>b
+  &=          A&=b              A=A&b
+  ^=          A^=b              A=A^b
+  |=          A|=b              A=A|b
+
+
+ <script>
+     var m=15;
+        m+=10;
+    document.write(m);    
+   </script>
+
+========================================================================
+Prompt Method Getting Input From User in JavaScript.
+========================================================================
+prompt():- The browser provides a build-in function which can be used to
+           get input from the user, named prompt. The prompt() method
+           displays a dialog box that prompts the visitor for input.
+           Once the prompt function obtains imput from the user, it 
+           returns that input.
+Syntax:- prompt(text,defaultText)
+         prompt("Enter Your Name:","name");
+         prompt("Enter Your Roll No.:");            
+
+<script>
+    var a=prompt("Enter value:");
+    document.write(a);
+    var a=prompt("Enter value:","India");
+    document.write(a);
+  </script>
+      
+
+========================================================================
+IF Statement
+========================================================================
+
+
+
 
 
 
