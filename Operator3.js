@@ -147,15 +147,174 @@ Syntax:- prompt(text,defaultText)
 IF Statement
 ========================================================================
 
+It is used to execute an instruction or block of instruction only if a 
+condition is fulfilled.
+Syntax:-
+        If(Condition)
+        {
+            Block of statements.
+        }
+<script>
+    var a=10;
+    if(a==10)
+    document.write("Sahi hai"); 
+  </script>
 
+<script>
+        var a=10;
+        var b=10;
+        if((a==10) && (b==10))
+        document.write("Barabar hai")
+    </script>
+  <script>
+        var a=10;
+        var b=12;
+        if((a==10) || (b==10))
+        document.write("Barabar hai")
+    </script>
+   <script>
+        var a=prompt("Enter your No:");
+        if((a==10))
+        document.write("Tum birender ho na");
+    </script>
+========================
+IF else Statement
+========================
+if....else statement is used when a different sequence of instructions is
+to be executed depending on the logical value(True/False) of the condition
+evaluated.
 
+Syntax:-
+        if(condition)
+        {
+            Statement_1_Block;
+        }
+        else
+        {
+            Statement_2_Block;
+        }
+        Statement_3;
 
+    <script>
+        var a=prompt("Enter your No:");
+        if((a==10))
+        document.write("Tum birender ho na");
+        else
+        document.write("Sahi no daal bhai");
+    </script>
 
+=========================
+Else IF Statement
+=========================
+To show a multi-way decision based on several conditions, we use else 
+if statement.
+Syntax:-
+         if(condition_1)
+         {
+            Statements_1_Block;
+         }
+         else if(condition_2)
+         {
+            Statement_2_Blocks;
+         }
+         else if(condition_n)
+         {
+            Statement_n_Block;
+         }
+         else
+         Statement_x;
 
+<body>
+    <script>
+        var a=prompt("Please enter marks:-");
+        if((a=>33) && (a<=44))
+        document.write("Pass");
+        else if((a=>45) && (a<=59))
+        document.write("Good");
+        else if((a=>60) && (a<=74))
+        docuement.write("Very Good");
+        else if(a=>75)
+        document.write("Execellence");
+        else
+        docuement.write("Fail");
+    </script>
+<script>
+    var a=prompt("Please enter marks:-");
+    if(a<=33)
+    document.write("Fail");
+    else if(a<=45)
+    document.write("Good");
+    else if(a<=60)
+    docuement.write("Very Good");
+    else if(a<=75)
+    document.write("Execellence");
+    else
+    docuement.write("Thik hai");
+</script>
 
+</body>         
 
+========================================================================
+Switch Statement
+========================================================================
+Check several possible constant values for an expression.
+Syntax:- 
+Switch(Expression){
+    case expression 1:
+        block of statements 1;
+        break;
+    case expression 2:
+        block of statements 2;
+        break;
+    default:
+        default block of instruction;
 
+}
+Ex:--------------------------------------------- 
+<Script>
+        var day=2;
+        switch(day){
+            case 1:
+                document.write("sun");
+                break;
+                case 2:
+                    document.write("Mon");
+                    break;
+                    case 3:
+                        document.write("Tue");
+                        break;
+                        default:
+                            document.write("kucch bhi");
+        }
+    </Script>
 
+Switch(Expression){
+    case expression 1:
+        block of statements 1;
+        break;
+    case expression 2:
+    case expression 3:    
+        block of statements 2;
+        break;
+    default:
+        default block of instruction;
+
+ Ex:-------------------------------------------------       
+    <Script>
+        var day=1;
+        switch(day){
+            case 1:
+                document.write("sun");
+                break;
+                case 2:
+                case 3:
+                        document.write("Tue");
+                        break;
+                        default:
+                            document.write("kucch bhi");
+        }
+
+    </Script>
 
 
 
