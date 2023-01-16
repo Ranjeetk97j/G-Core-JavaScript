@@ -401,10 +401,23 @@ Systax:-
     </script>                                          
 
 
+===============================
+Nested While Loop
+================================
+While Loop inside while Loop
 
-
-
-
+var i=0;
+While(i<3)
+{
+    document.write(i);
+    i++
+    var j=0;
+    while(j<5)
+    {
+        document.write(j);
+        j++;
+    }
+}
 
 
 
