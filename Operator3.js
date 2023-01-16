@@ -418,6 +418,106 @@ While(i<3)
         j++;
     }
 }
+=====================================
+Do While Loop
+===============================
+The do while loop is similar to while loop, but the condition is checked
+after the loop body is executed. This ensure that the loop body is run at
+least once.
+Syntax:-
+do
+{
+    statements;
+}While(test condition);
+
+var i=0
+do
+{
+    document.write(i);
+    i++;
+}while(i<5);
+
+Ex:--------
+    <script>
+        var i=1;
+        do
+        {
+            document.write(i);
+            i++;
+            document.write("<br>");
+        }while(i<=5);
+    </script>
+    
+      <script>
+        var i=1;
+        do
+        {
+            if(i==3)
+            break;
+            document.write(i);
+            i++;
+            document.write("<br>");
+        }while(i<=5);
+    </script>  
+
+====================================
+Nested Do while Loop
+================================
+
+    <Script>
+        var i=1;
+        do
+        {
+            document.write("<strong> Outer Loop </strong>");
+            document.write(i);
+            i++;
+            document.write("<br>");
+            var j=1;
+            do
+            {
+                document.write("<Strong> Inner Loop </Strong>");
+                document.write(j);
+                j++;
+                document.write("<br>");
+            }while(j<=5);
+        }while(i<=3);
+    </Script>
+    
+
+==================
+Break & Continue
+==================
+
+    <Script>
+        for(i=1; i<=10; i++)
+        {
+            if(i==5)
+            {
+                break;
+            }
+            document.write(i);
+            document.write("<br>");
+        }
+    </Script>
+
+    <Script>
+        for(i=1; i<=10; i++)
+        {
+            if(i==5)
+            {
+                continue; // 5 ko skip kar deta hai
+            }
+            document.write(i);
+            document.write("<br>");
+        }
+    </Script>
+
+
+
+
+
+
+
 
 
 
