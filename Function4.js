@@ -288,11 +288,79 @@ Output:-
 10
 40
 
+====================================
+Rest VS Arguments
+====================================
+There are three main difference between rest parameters and the arguments
+objects:-
+>Rest parameters are only the ones that haven't been given a separate name,
+while the arguments object contains all arguments passed to the function.
 
+>The arguments object is not a real array, while Rest parameters are Array
+instances, meaning methods like sort, map, forEach or pop can be applied on
+it directly.
 
+>The arguments object has additional functionality specific to itself(like the
+    called property).
 
+    <script>
+        //Rest parameter
+        function restShow(a,...args)
+        {
+            console.log("a:"+a);
+            console.log(args);
+        }
+        restShow(10, 20, 30, 40, 50)
+        output:-a=10
+                20 30 40 50 
 
+        //Arguments Object
+        function showw(a)
+        {
+            console.log("a:"+a);
+            console.log(arguments);
+        }
+        show(10,20,30,40,50);
+        output:-
+        a=10
+        10 20 30 40 50
+    </script>
 
+ =========================
+ Return Statement
+ =========================
+ A return statement may be return Any type data, including arrays and 
+ objects.
+ Syntax:-
+          return(variable or expression);
+     Ex:-
+          return(3);
+          return(a+b);
+          return(a);     
+
+Syntax:-
+
+function function_name(para1, para2....)
+{
+    Block of statement;
+    return (expression);
+}
+Ex:-
+function add(a,b)
+{
+    return(a+b);      //return a+b;
+}
+
+    <Script>
+      function add(a,b)
+        {
+            return (a+b);
+        }
+        document.write(add(40,50));
+        document.write(add(30,10));
+        document.write(add(20,40));
+        document.write(add(10,60));
+    </Script>
 
 
 
