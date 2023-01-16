@@ -8,11 +8,12 @@
 </head>
 <body>
     <script>
-        function add(a,b,c)
+        function show(a,...args)
         {
-            document.write("A:-"+a+"B:-"+b+"C:-"+c);
+            document.write(a+"<br>")
+            document.write(args[2]);
         }
-        add(10,20,30);
+        show(10,20,30,40,50);
     </script>
 </body>
 </html>

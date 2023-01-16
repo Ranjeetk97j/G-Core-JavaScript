@@ -114,10 +114,179 @@ passed to the function, the first entry's index starting at 0. The
 arguments object is not an array. it is similar to an Array, but does
 not have any Array properties except length.
 
+    <script>
+        function disp(name1,name2)
+        {
+            document.write(arguments[0]+" ");
+            document.write(arguments[1]);
+        }
+        disp("india","usa");
+    </script>
 
 
+    <script>
+        function disp(name1,name2)
+        {
+            document.write(arguments.lenghth);
+        }
+        disp("india","usa");
+    </script>
+
+    <script>
+        function disp()
+        {
+           for(var i=0; i<=arguments.length; i++)
+           {
+            document.write(arguments[i]+" ");
+           }
+        }
+        disp("india","usa","dubai");
+    </script>
+
+=====================================
+Many Function Arguments
+=====================================
+IF a function is called with too many arguments, these arguments can be reached
+using the arguments object which is a built-in.
+
+Function add(a,b)
+{
+    document.write("A:-"+a+"B:-"+b);
+    document.write("C:-"+arguments[2]+"D:"+arguments[3]);
+}
+add(10,20,30,40);
+
+    <script>
+        function add(a,b)
+        {
+            document.write("A:-"+a,"B:-"+b+"C:-"+Arguments[2])
+        }
+        add(10,20,30);
+    </script>
+
+=========================================
+Default Parameter
+=========================================
+Syntax:-
+Function function_name(para1,para2,para3="value")
+{
+    block of statement;
+}
+Syntax:-
+function function_name(para1,para2="value",para3)  //problem undefined
+{
+    block of statement;
+}
+Syntax:-
+function function_name(para1,para2="value1",para3="value2")  //problem undefined
+{
+    block of statement;
+}
 
 
+<script>
+        function add (a,b,c=70)
+        {
+            document.write("A="+a+"<br>");
+            document.write("B="+b+"<br>");
+            document.write("C="+c+"<br>");
+        }
+        add(10,20);
+
+        output:-10 20 70
+    </script>
+
+
+script>
+        function add (a,b,c=70)
+        {
+            document.write("A="+a+"<br>");
+            document.write("B="+b+"<br>");
+            document.write("C="+c+"<br>");
+        }
+        add(10,20,30);
+
+        output:-10 20 30
+    </script>
+
+    <script>
+        function add (a,b=70,c)
+        {
+            document.write("A="+a+"<br>");
+            document.write("B="+b+"<br>");
+            document.write("C="+c+"<br>");
+        }
+        add(10,20);
+        output:-10 20 undefine
+
+
+    </script>    
+
+
+>JavaScript also allows the use of arrays and null as default values.
+Ex:-
+ Function add(a, b, c=null)  //null is case sensitive
+ {
+    document.write("A="+a+"<br>");
+    document.write("B="+b+"<br>");
+    document.write("C="+c+"<br>");
+ }
+add(10,20);    //10 20 null
+add(10,20,30); //10 20 30
+add(10);       //10 undefined null
+
+
+array:---------
+function add(a=[101])
+{
+    document.write("A="+a[0]+"<br>");
+}
+add([10]);    //10
+add();        //101
+
+==================================================================
+Rest Parameters
+==================================================================
+The rest parameter allows to represent an indefinite number of arguments
+as an array.
+Syntax:-
+function function_name(...args)
+{
+    block of statement;
+}
+
+Syntax:-
+function function_name(a,...args)
+{
+    block of statement;
+}
+
+The rest operator must be the last parameter to a function.
+
+    <script>
+        function show(a,...args)
+        {
+            document.write(a+"<br>")
+            document.write(args);
+        }
+        show(10,20,30,40,50);
+    </script>
+Output:-
+10
+20,30,40,50
+
+
+<script>
+        function show(a,...args) last me hi rest parameter likhna hai
+        {
+            document.write(a+"<br>")
+            document.write(args[2]);
+        }
+        show(10,20,30,40,50);
+    </script>
+Output:-
+10
+40
 
 
 
