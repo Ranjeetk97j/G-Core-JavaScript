@@ -1,15 +1,5 @@
-var i=1;
-while(i<=3)
+function display ()
 {
-    console.log(i);
-    i++;
-    // console.log("<br>");
-    var j=1;
-    while(i<=5)
-    {
-        console.log(j);
-        j++;
-        // console.log("<br>");
-    }
-
+    document.write("Hello world");
 }
+display();
