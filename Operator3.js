@@ -47,7 +47,7 @@ JavaSript Operators
     </script>
 ==============================
 >Logical Operators
-============================
+==============================
 (&&) Logical And (5<2) && (5>3)  False
 (||) Logical Or  (5<2) || (5>3)  True
 (!)  Logical Not !(5<2)          True
@@ -335,11 +335,81 @@ Ex:---------
         }
     </script>
 
+
+var i=0;
+for(;;i++)
+{
+    if(i==3)
+    {
+        break;
+    }
+    document.write(i);
+}    
+
+=======================
+Nested for Loop
+=======================
+For loop inside for loop.
+Syntax:-
+       for(initialization; test condition; increment or decrement)
+       {
+        block of statements;
+        for(initialization; test condition; increment or decrement)
+        {
+            block of statements;
+        }
+       }
+
+    <script>
+        for(i=1; i<=5; i++)
+        {
+            document.write("Outer Loop");
+            document.write(i);
+            document.write("<br>");
+            for(j=1; i<5; j++)
+            {
+                document.write("Inner Loop");
+                document.write(j);
+                document.write("<br>");
+
+            }
+        }
+    </script>
+
+=======================
+While Loop
+=======================    
+The while loop keeps repeating an action until an associated condition
+returns false.
+Systax:-
+        while(test condition)           var i=0;
+        {                                while(i<5)
+            body of the loop;            {
+            increment/decrement;           document.write(i);
+        }                                  i++;
+                                          }
+
+  <script>
+        var i=1;                            var i=0;
+        while(i<=5)                         while(true)
+        {                                   {
+            document.write(i);                if(i==3)
+            i++;                                break;
+            document.write("<br>");            document.write(i);
+        }                                      i++;
+                                              }
+    </script>                                          
+
+
+
+
+
+
+
+
+
+
+
+
     
-
-
-
-
-
-
-*/
+\*/
