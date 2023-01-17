@@ -349,9 +349,158 @@ var samsung=new Mobile();
 samsung.price();
 
 
+=============================================================
+Constructor with Parameter
+=============================================================
+
+function Mobile(model_no){
+    this.model=model_no;
+    this.model=function(){
+        document.write(this.model+"Price Rs.3000 <br>");
+    };
+}
+var samsung=new Mobile("Galaxy");
+var nokia=new Mobile("3310");
+samsung.price();
+nokia.price();
+
+==================================================================
+Check Properties Exist
+==================================================================
+>Typeof Operator:-----------------
+
+Syntax:- if(typeof object_name.key!=="undefined")
+
+Ex:-
+    if(typeof nokia.memory!=="undefined")
+    {
+        document.write("Available");
+    }else{
+        document.write("Doesn't Exist");
+    }
 
 
+    <script>
+        function Mobile(model_no){
+            this.model=model_no;
+            this.memory=4;
+        }
+        var samsung=new Mobile("Galaxy");
+        var nokia=new Mobile("3310");
+        if(typeof nokia.memory !== "undefined")
+        {
+            document.write("Available");
+        }else{
+            document.write("doesn't Exist");
+        }
+    </script>    
 
+>In Operator:----------------------
+Syntax:- if("key" in object_name)
+
+Ex:- if("Memory" in nokia){
+    document.write("Available");
+}else{
+    docuement.write("Doesn't Exist");
+}
+
+
+    <script>
+        function Mobile(model_no){
+            this.model=model_no;
+            this.memory=4;
+        }
+        var samsung=new Mobile("Galaxy");
+        var nokia=new Mobile("3310");
+        
+        if("memory" in nokia)
+        {
+            document.write("Available");
+        }else{
+            document.write("doesn't Exist");
+        }
+    </script>
+
+
+============================================================
+For In Loop
+============================================================
+The for...in loop is used to loop through an objects properties.
+Syntax:-
+        for(var variable_name in object_name){
+            block of statement
+        }    
+
+Ex:-
+For(var specs in samsung){
+    document.write(specs);
+}        
+
+
+    <script>
+        function Mobile(model_no){
+            this.model=model_no;
+            this.color="white";
+            this.ram="4GB";
+            this.price=function(){
+                document.write(this.model +"Price Rs.3000<br>");
+            };
+        }
+        var samsung=new Mobile("Galaxy");
+        var nokia=new Mobile("3310");
+        for(var specs in nokia){
+            if(typeof nokia[specs]!=="function"){
+                document.write(specs+" "+nokia[specs]+"<br>");
+            }
+        }
+Output:-  //model 3310
+          //color white
+          //ram 4GB
+
+        
+    </script>
+
+======================================================================
+Ways of creating objects in javascript
+======================================================================
+//Object Literal
+  var fees={};
+  fees["Rahul"]=200;
+
+//Object Literal Declare and Initial 
+var fees = {Rahul:200};
+
+//Object Constructor
+var fees=new object();
+
+//Factory Function
+function mobile(){
+    return{
+        model:"Galaxy";
+    }
+}
+var samsung=mobile();
+var lg=mobile();
+
+//Constructor Function
+function Mobile(){
+    this.model="Galaxy";
+}
+var samsung=new Mobile();
+var lg=new Mobile();
+
+====================================================================
+Class
+====================================================================
+A specific category can be defined as class.
+Example:-
+          Mobile  -------  Class ----------- Person       
+   samsung   LG  Nokia --- Objects ----  Rahul   Sonam   Sujit
+      Model                                 Name
+      Ram   --------    Properties------     Address
+      Color             Methods             Mobile
+      Price                                 Email
+      Calling()                             Eating()
 
 
 

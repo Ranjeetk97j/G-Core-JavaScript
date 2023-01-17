@@ -8,14 +8,27 @@
 </head>
 <body>
     <script>
-    function Mobile(){
-        this.model="3310";
-        this.price=function(){
-            document.write(this.model + "Price Rs. 3000");
+        function Mobile(model_no){
+            this.model=model_no;
+            this.color="white";
+            this.ram="4GB";
+            this.price=function(){
+                document.write(this.model +"Price Rs.3000<br>");
+            };
         }
-    }
-    var samsung = new Mobile();
-    samsung.price();
+        var samsung=new Mobile("Galaxy");
+        var nokia=new Mobile("3310");
+        for(var specs in nokia){
+            if(typeof nokia[specs]!=="function"){
+                document.write(specs+" "+nokia[specs]+"<br>");
+            }
+        }
+Output:-  //model 3310
+          //color white
+          //ram 4GB
+
+        
     </script>
+
 </body>
 </html>
