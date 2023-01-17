@@ -8,13 +8,24 @@
 </head>
 <body>
     <script>
-        var a;
-        //value not assigned undefined
-        document.write(a + "<br>");
-        //b doesn't exist underfined
-        document.write(typeof(b)+"<br>");
-        //undefined Error
-        document.write(b+"<br>");
+        function myvar(){
+            var a=10;
+            if(true){
+                var a=20;
+                document.write(a+"<br>");
+            }
+            document.write(a+"<br>");
+        }
+        myvar();
+        function mylet(){
+            let a=40;
+            if(true){
+                let a=50;
+                document.write(a+"<br>");
+            }
+            document.write(a+"<br>");
+        }
+        mylet();
     </script>
 </body>
 </html>

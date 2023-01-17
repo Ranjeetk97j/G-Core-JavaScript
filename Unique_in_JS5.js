@@ -490,12 +490,55 @@ undefined Vs Null
 Undefined means the value hasn't been set, whereas null means the value
 has been set to be empty.
 
+====================================================================
+Var,let and const
+====================================================================
 
+Var:- The scope of a variable declared with var is its current execution
+      context, which is either the enclosing function or, for variable
+      declared outside any function, global.
 
+      ye function ko local me yadi assign kiya gaya hai toh global me bhi kam karega
+      
+let:- let allows you to declare variable that are limited in scope to the
+      block, statement, or expression on which it is used.
 
+      ye function ko local me yadi assign kiya gaya hai toh local me hi
+      sirf kam karega global me nahi kam karega
+      
+const:-This declaration creates a constant whose scope can be either global
+       or local to the block in which it is declared. Global constants do
+       not become properties of the window object, unlike var variables. An
+       initializer for a constant is required; that is, you must specify its
+       value in the same statement in which its's declared which can't be 
+       changed later.    
+ 
+ye function ko local me yadi assign kiya gaya hai toh local me hi
+      sirf kam karega global me nahi kam karega       
 
+const ok re-assign nahi kiya ja sakta hai     const a=10   (a=20) bad me ye nahi kiya ja sakta hai
+const window object properties nahi hota hai
 
-
+    <script>
+        function myvar(){
+            var a=10;
+            if(true){
+                var a=20;
+                document.write(a+"<br>");
+            }
+            document.write(a+"<br>");
+        }
+        myvar();
+        function mylet(){
+            let a=40;
+            if(true){
+                let a=50;
+                document.write(a+"<br>");
+            }
+            document.write(a+"<br>");
+        }
+        mylet();
+    </script>
 
 
 
