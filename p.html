@@ -8,15 +8,14 @@
 </head>
 <body>
     <script>
-        var fees = new Object();
-        fees ["Rahul"] =100;    //fees.Rahul=100;
-        fees ["Sumit"] =200;    //fees.Sumit=200;
-        fees ["Rohan"] =300;    //fees.Rohan=300;
-        fees ["total"] = function(){return(100+200);}; //Method
-        document.write(fees.total()); 
-        
-        document.write(fees["Sumit"]);
-        document.write(fees.Sumit);
+    function Mobile(){
+        this.model="3310";
+        this.price=function(){
+            document.write(this.model + "Price Rs. 3000");
+        }
+    }
+    var samsung = new Mobile();
+    samsung.price();
     </script>
 </body>
 </html>

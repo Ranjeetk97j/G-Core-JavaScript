@@ -211,12 +211,142 @@ fees["Super Man"]=100;
 document.write(fees["Super Man"]);
 document.write(fees["Super Man"]);
 
+==================================================================
+Acessing Methods
+==================================================================
+Object members that are functions are called methods. These are accessed
+with dot operator applied to an object alternative to the dot operator is
+the array [] operator.
+Syntax:-
+        object_name.Method_name();
+Ex:-
+    var fees={Rahul:100, Sumit:200, Rohan:300, total:function(){return(100+200+300);}};
 
+    var fees={};
 
+    fees['total']=function() {return(100+200+300);};
+    fees.total=function(){return(100+200+300);};
+    
+    document.write(fees.total());
+    document.write(fees.["total"]());
 
+    <script>
+        var fees = new Object();
+        fees ["Rahul"] =100;    //fees.Rahul=100;
+        fees ["Sumit"] =200;    //fees.Sumit=200;
+        fees ["Rohan"] =300;    //fees.Rohan=300;
+        fees ["total"] = function(){return(100+200);}; //Method
+        document.write(fees.total()); 
+    </script>
 
+==========================================================================
+Adding Properties/Methods
+==========================================================================
+Syntax:-
+        Object_name.Property_name=value;
+        Object_name['Property_name']=value;
+Ex:-
+    fees.Sonam=600;
+    fees["Sonam"]=600;   
+    
+        <script>
+        var fees={Rahul:100, Sumit:200};
+        document.write(fees.Rahul +" "+fees.Sumit);
+        fees.Sonam=600;     //fees ['Sonam']=600;  ye add ho gaya object me.
+        console.log(fees);
+        document.write(fees.Rahul +" "+fees.Sumit+" "+fees.Sonam);
+        
+    </script>
 
+===========================================================================
+Delete Properties
+===========================================================================
+Delete operator is used to delete instance properties.
+Syntax:-
+         delete object_name.property_name
+    Ex:-delete fees.Rahul;
 
+After removal with delete operator, the property has the undefined value.
+
+Ex:-
+    <script>
+        var fees={Rahul:100, Sumit:200};
+        delete fees.Rahul;
+        document.write(fees.Rahul +" "+fees.Sumit);
+        console.log(fees);
+        
+    </script>
+
+===========================================================================
+Factory Function
+===========================================================================
+When a function returns an object, we call it a factory function. It can
+produce object instance without new keyword or classes.
+
+Ex:-
+     function mobile(){
+        return{
+            model:"Galaxy",
+            price:function(){return("Price:Rs.3000");}
+        };
+     }
+     var samsung=Mobile();
+     document.write(samsung.model+" "+samsung.price());
+
+Ex:----------------
+     <script>
+        function mobile(){
+            return{
+                model:"Galaxy",
+                price: function(){return "Price Rs.3000";}
+            };
+        }
+         var samsung = mobile();
+         document.write(samsung.model+" "+samsung.price());
+    </script>    
+
+======================================
+Factory Function with Parameter
+======================================
+function mobile(model_no){
+    return{
+        model: model_no,
+        price: function(){
+            return("Price is Rs.3000");
+        }
+    };
+}
+var samsung=mobile("galaxy");
+var nokia=mobile("3310");
+document.write(samsung.model+" "+samsung.price());
+document.write(nokia.model+" "+nokia.price());
+
+    <script>
+        function mobile(model_no){
+            return{
+                model:model_no,
+                price: function(){return "Price Rs.3000";}
+            };
+        }
+         var samsung = mobile("galaxy");
+         var nokia = mobile("3310");
+         document.write(samsung.model+" "+samsung.price()+"<br>");
+         document.write(nokia.model+" "+nokia.price());
+    </script>
+===============================================================
+Constructor
+===============================================================
+Object instance are created with constructor, which are basically special
+function that prepare new instance of an object for use.
+
+function Mobile(){
+    this.model="3310";
+    this.price=function(){
+        document.write(this.model+"price Rs.3000");
+    }
+}
+var samsung=new Mobile();
+samsung.price();
 
 
 
