@@ -8,24 +8,15 @@
 </head>
 <body>
     <script>
-        function myvar(){
-            var a=10;
-            if(true){
-                var a=20;
-                document.write(a+"<br>");
-            }
-            document.write(a+"<br>");
-        }
-        myvar();
-        function mylet(){
-            let a=40;
-            if(true){
-                let a=50;
-                document.write(a+"<br>");
-            }
-            document.write(a+"<br>");
-        }
-        mylet();
+        var fees = new Object();
+        fees ["Rahul"] =100;    //fees.Rahul=100;
+        fees ["Sumit"] =200;    //fees.Sumit=200;
+        fees ["Rohan"] =300;    //fees.Rohan=300;
+        fees ["total"] = function(){return(100+200);}; //Method
+        document.write(fees.total()); 
+        
+        document.write(fees["Sumit"]);
+        document.write(fees.Sumit);
     </script>
 </body>
 </html>

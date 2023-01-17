@@ -63,9 +63,153 @@ Ex:-
    Fee["Super Man"]=400; ------> Fees.Super Man=400;
   
    Multiwork key required quotation.
-   
+
+   Fee ["total"] = funtion() { return (100+200+300);};  --> Fee.total = funtion() { return (100+200+300);};
+   Fee ["total"] = sum; ----> Fee.total = sum;
+
+    <script>
+        //declaration of object
+        var fees ={};
+        fees["rahul"]=100;
+        fees["sumit"]=200;
+        fees["rohan"]=300;
+        document.write(fees['rahul']);
+2nd way:--
+        var fees ={};
+        fees.rahul=100;
+        fees.sumit=200;
+        fees.rohan=300;
+        document.write(fees.sumit);
+    </script>   
+Method:--
+          var fees ={};
+          fees["rahul"]=100;
+          fees["total"]=function(){
+            return (100+200);
+          };
+          document.write(fees.total());
+2nd way--  fees.total=function(){
+            return (100+200);
+          };
+          document.write(fees.total());
+
+==================================================================
+Declaration And Initilization of Object
+==================================================================
+>Using Object Literal
+Syntax:-
+        var object_name = {key1:value1, key2:value2, key_n:value_n};
+        var fees={
+            Rahul: 100;
+            Sumit: 200;
+            Rohan: 300;
+        };
+
+        var fees={
+            Rahul: 100;
+            Sumit: 200;
+            Rohan: 300;
+            "Super Man":400
+        };
+        var fees={Rahul:100, Sumit:200, Rohan:300, "Super Man":400};
+
+Syntax:- var object_name ={key1:value1, key2:value2, key_n:value_n, key:function};
+Ex:-    var fees={Rahul:100, Sumit:200, Rohan:300, total:function(){
+                 return(100+200+300);
+                 }};
+ var fees={
+    Rahul:100,
+    Sumit:200,
+    Rohan:300,
+    total:function(){
+        return(100+200+300);
+    }
+ };
+
+Ex:-
+    <script>
+        var fees={Rahul:100, Sumit:200, Rohan:300};
+        document.write(fees.Sumit);
+    </script>
+    <script>
+        var fees={Rahul:100, 
+            Sumit:200, 
+            Rohan:300;
+            "Super Man":400
+        };
+        document.write(fees.Sumit);
+        document.write(["Super Man"]);
+
+    </script>
+
+     // For Method
+        var fees={Rahul:100, total: function(){
+            return(100+200)
+        }};
+        document.write(fees.total());
+
+=========================================================================
+Declaration and Initialization of Object
+=========================================================================
+>Using Object Constructor
+Syntax:- var object_name = new Object();
+Ex:-
+    var fees = new Object();
+    fees ["Rahul"]=100; ----> fees.Rahul=100;
+    fees ["Sumit"]=200; ----> fees.Sumit=200;
+    fees ["Rohan"]=300; ----> fees.Rohan=300;
+
+    fees["total"]=function() {return(100+200+300);};
+    fees["total"]=sum;
+    fees.total=function(){return(100+200+300);};
+    fees.total=sum;
 
 
+
+          <script>
+        var fees = new Object();
+        fees ["Rahul"] =100;    //fees.Rahul=100;
+        fees ["Sumit"] =200;    //fees.Sumit=200;
+        fees ["Rohan"] =300;    //fees.Rohan=300;
+        fees ["total"] = function(){return(100+200);}; //Method
+        document.write(fees.total()); 
+        
+        document.write(fees["Sumit"]);
+        document.write(fees.Sumit);
+    </script>
+
+Note:- 
+       Object Literal & dot operator hi use karna hai
+       var fees ={ } ---- iska follow kare  ------this is litral
+       var fees = new Object(); ---- iska nahi ------this is object
+
+======================================================================
+Accessing Properties
+=======================================================================
+A property of an object is some piece of named data it contains. These
+are accessed with dot operator applied to an object alternative to the
+dot operator is the array [] operator.
+
+Syntax:- object_name.property_name
+Ex:-
+    var fees = {Rahul:100, Sumit:200, Rohan:300};
+    
+    var fees ={};
+
+    fees ['Rahul']=100; or fees.Rahul = 100;
+
+    document.write(fees['Rahul']);
+    document.write(fees["Rahul"]);
+    document.write(fees.rahul);
+
+var fees = {Rahul:100, Sumit:200,"Super Man":400};
+
+var fees={};
+
+fees["Super Man"]=100;
+
+document.write(fees["Super Man"]);
+document.write(fees["Super Man"]);
 
 
 
