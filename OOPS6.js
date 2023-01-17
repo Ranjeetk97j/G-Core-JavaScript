@@ -502,6 +502,78 @@ Example:-
       Price                                 Email
       Calling()                             Eating()
 
+========================
+Defining a Class
+========================
+We define calss in javascript using custom constructor.
+var Mobile=Function(model_no,sprice){
+    this.model=model_no;
+    this.color="white";
+    this.price=3000;
+    this.sp=sprice;
+    this.sellingprice=function(){
+        return (this.price+this.sp);
+    };
+};
+var samsung=new Mobile("Galaxy",2000);
+var nokia=new Mobile("3310",1000);
+
+script>
+        var Mobile = function(model_no,sprice){
+            this.model=model_no;
+            this.color="white";
+            this.price=3000;
+            this.sp=sprice;
+            this.sellingprice=function(){
+                return (this.price + this.sp);
+            };
+            this.data=function(){
+                document.write("Model No:"+ this.model+"Price:"+
+                this.sellingprice());
+            }
+        };
+        var samsung=new Mobile("Galaxy",2000);
+        var nokia=new Mobile("3310",1000);
+        nokia.data();
+    </script>
+
+=============================================================
+Private Properties and Methods
+=============================================================
+Using var or let const you can create private properties and methods.
+Ex:-
+this.price
+var price
+let price
+
+
+   <script>
+        var Mobile = function(model_no,sprice){
+            this.model=model_no;
+            this.color="white";
+            var price=3000;        //we can't access it
+            this.sp=sprice;
+            var show=function(){       //we can't access it
+                return "Hello World";
+            };
+        };
+        var samsung=new Mobile("Galaxy",2000);
+        var nokia=new Mobile("3310",1000);
+        document.write(nokia.show());
+    </script>
+
+==========================================================
+Prototype
+==========================================================
+
+
+
+
+
+
+
+
+
 
 
 
