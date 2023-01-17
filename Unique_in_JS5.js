@@ -379,13 +379,125 @@ var myfun=(a,b=30)=>{
 };
 myfun(20);
 
-------------
+---------------------------
     <script>
         var myfun = (a,...args) =>{
             document.write(a+" "+args);
         };
         myfun(10,20,50,80,90);
     </script>
+---------------------------
+    <script>
+        var myfun = (a,b)=>(a+b);
+        document.write(myfun(10,20));
+
+        // var myfun=c=>c;       //work
+        // var myfun=c=>{c};    //won't work
+        // var myfun=c=>{return c};  //work
+    </script>    
+
+
+=======================================================================
+Immediatedly Invoked Function Expression (IIFE)
+=======================================================================
+IIFE (Immediately invoked Function Expression) is a JavaScript that runs
+as soon as it is defined.
+It is a design pattern which is also known as Self-Executing Anonymous 
+Function and contains two major parts. The first is the anonymous function
+with lexical scope enclosed within the Grouping Operator (). This prevents
+accessing variables within the IIFE idiom as well as polluting the global
+scope.
+The second part is creating the immediately executing function expression(),
+through which the JavaScript engine will directly interpret the function.
+
+Ex:-
+ (function(){document.write("Geekyshows");})();
+ (function(a,b){document.write(a+""+b);})(10,20);
+
+
+>Avoid creating global variable and functions
+>As it doesn't define variable and function globally so there will be 
+ no name conflicts.
+>Scope is limited to that particular function. 
+
+IIFE function self exutive hota hai ye khud ko call karta hai.
+
+    <script>
+        (function (a,b){
+            var a=20;
+            document.write(a+" "+b);
+        })(10,30);
+    </script>
+
+
+======================================================
+Typeof Operator
+======================================================
+The typeof operator is used to get the data type(returns a string)
+of its operand. The operand can be either a literal or a data
+structure such as a variable, a function, or an object.
+
+Syntax:-
+typeof operand
+typeof(operand)
+
+Ex:- 
+typeof"a";
+
+    <script>
+        var a=13;
+        document.write(typeof(a) + "<br>");
+        document.write(typeof("hello")+"<br>");
+    </script>
+
+===========================================
+Undefined in JavaScript
+===========================================
+The undefined type is used for variable or object properties that either
+do not exist or have not been assigned a value. The only value an undefined
+type can have is undefined.
+
+var a;
+document.write(a);     //not assigned a value:- Undefined
+document.write(b);     //Not exist:- Undefined Error
+
+    <script>
+        var a;
+        //value not assigned undefined
+        document.write(a + "<br>");
+        //b doesn't exist underfined
+        document.write(typeof(b)+"<br>");
+        //undefined Error
+        document.write(b+"<br>");
+    </script>
+
+========================
+Null in JavaScript
+========================
+The null value indicates an empty value; it is essentially a placeholder
+that represents "nothing". The null value is defined as an empty object
+so using typeof operator on a variable holding null shows its type to be 
+object.
+
+var a=null;
+document.write(a+"<br>");          //null
+document.write(typeof(a)+"<br>");  //object
+
+======================================================
+undefined Vs Null
+======================================================
+
+Undefined means the value hasn't been set, whereas null means the value
+has been set to be empty.
+
+
+
+
+
+
+
+
+
 
 
 
