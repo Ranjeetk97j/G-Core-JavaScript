@@ -7,12 +7,11 @@
     <title>Practice</title>
 </head>
 <body>
-    <Script>
-      function add(a,b)
-        {
-            return (a+b);
-        }
-        document.write(add(40,50));
-    </Script>
+    <script>
+        var myfun = (a,...args) =>{
+            document.write(a+" "+args);
+        };
+        myfun(10,20,50,80,90);
+    </script>
 </body>
 </html>
