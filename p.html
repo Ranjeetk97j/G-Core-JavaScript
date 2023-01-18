@@ -8,19 +8,17 @@
 </head>
 <body>
     <script>
-        var Mobile = function(model_no,sprice){
+        var Mobile=function(model_no){
             this.model=model_no;
-            this.color="white";
-            var price=3000;        //we can't access it
-            this.sp=sprice;
-            var show=function(){       //we can't access it
-                return "Hello World";
-            };
+            this.price=3000;
         };
-        var samsung=new Mobile("Galaxy",2000);
-        var nokia=new Mobile("3310",1000);
-        document.write(nokia.show());
+        var samsung=new Mobile("Galaxy");
+        var nokia=new Mobile("3310");
+        samsung.color="White";
+        nokia.color="White";
+        document.write(samsung.color);
+        console.log(samsung);
+        console.log(samsung);
     </script>
-
 </body>
 </html>
