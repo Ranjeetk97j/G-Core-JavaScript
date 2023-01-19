@@ -360,16 +360,271 @@ Ex:-
         document.write(geek[3]);
     </script>
 
+========================================================================
+Important Point In Array
+========================================================================
+> JavaScript arrays are zero-indexed: the first element of an array is at
+  index 0.
+> Using an invalid index number return undefined.
+> Its possible to quote the JavaScript array indexes as well (eg.geek['2']
+  instead of geek[2]), although it's not necessary.
+> Arrays cannot use strings as element indexes but must use integers.
+> There is no associative array in JavaScript.
+       geek["fees"]=200;
+> No advantage to use Array constructor so better to use Array Literal
+  for creating Arrays in JavaSctipt.
+  
+========================================================================
+Accessing Array Elements
+========================================================================
 
+ <script>
+        var geek=["Rahul","Ram",56,"Jay"];
+        var geek=new Array("Rahul","Ram",56,"Jay");
+        document.write(geek[3]);
+    </script>
 
+Access all at Once:------
 
+<script>
+        var geek=["Rahul","Ram",56,"Jay"];
+        var geek=new Array("Rahul","Ram",56,"Jay");
+        document.write(geek);
+    </script>
 
+====================================================================
+Modifying Array Elements
+====================================================================
+Var geek = ["Rahul","Ram",56,"Jay"];
+document.write(geek);
+geek[0]="Rohit";
+document.write(geek);
 
+    <script>
+        var geek=["Rahul","Ram",56,"Jay"];
+        document.write(geek + "<br>");
+        geek[0]="Rohit";
+        document.write(geek + "<br>");
+    </script>
 
+====================================================================
+Removing Array Elements
+====================================================================
+Array elements can be removed using delete operator. This operator
+sets the array element it is invoked on to undefined but does not
+change the array's lenth
 
+Syntax:- delete Array_name[index];
+Ex:-    delete geek[0];
 
+    <script>
+        var geek=["Rahul","Ram",56,"Jay"];
+        document.write(geek + "<br>");
+        delete geek[0];
+        document.write(geek);
+        document.write(geek[0] + "<br>"); //undefined
+    </script>
 
+====================================================================
+Length Property
+====================================================================
+The lenght property retrieves the index of the next available 
+position at the end of the array. The length property is automatically
+updated as new elements are added to the array. For this reason,
+length is commonly used to iterate through all elements of an array.
 
+var geek = ["Rahul", "Ram", 56, "jay"];
+document.write(geek.length);
+
+    <script>
+        var geek=["Rahul","Ram",56,"Jay"];
+        document.write(geek.length);
+    </script>
+
+====================================================================
+Iteration of Array using for Loop in JavaScript
+====================================================================
+<script>
+        var geek=["Rahul","Ram",56,"Jay"];
+        for(let i=0; i<=3; i++){
+            document.write(geek[i]+"<br>");
+        }
+</script>
+
+<script>
+        var geek=["Rahul","Ram",56,"Jay"];
+        for(let i=0; i<geek.length; i++){
+            document.write(geek[i]+"<br>");
+        }
+</script>
+
+====================================================================
+forEach Loop
+====================================================================
+The forEach calls a provided function once for each element in an array,
+in order.
+Syntax:- array.forEach(function(value, index, arr){
+
+})
+
+where:-
+     value:- It is the current value of array index.
+     index:- Array's index number
+     arr:-   The array object the current element belongs to
+  Ex:- geek.forEach(function(name){
+        document.write(name);
+  });   
+
+    <script>
+        var geek=["Rahul","Ram",56,"Jay"];
+        geek.forEach(function(name){
+            document.write(name+"<br>");
+        })
+        
+        var geek=["Rahul","Ram",56,"Jay"];
+        geek.forEach(function(value,index){
+            document.write(value+" "+ index + "<br>");
+        })
+    </script>
+===================================================================    
+for of Loop
+===================================================================
+The for...of statement creates a loop iterating over iterable objects.
+Syntax:-
+        for(var variable_name of array){
+
+        }
+Ex:- 
+     for(var value of geek){
+
+     }
+
+    <script>
+        var geek=["Rahul", "Ram", 56, "Jay"];
+        for(let value of geek){
+            document.write(value+"<br>");
+        }
+    </script>
+
+=====================================================================
+Input from User in Array
+=====================================================================
+you can get input from user in an empty array:-
+
+* var geek=[];
+* var geek=new Array();
+* var geek=new Array(3); //3 is length of array
+
+    <script>
+        //defining Array
+        var elm=prompt("Enter No. of Elements:");
+        var geek=[];
+        //Input
+        for(let i=0; i<=elm; i++){
+            geek[i]=prompt("Enter Name:");
+        }
+        //Display Values
+        for(let i=0; i<=elm; i++){
+            document.write(geek[i]+"<br>");
+        }
+    </script>
+
+>Constructor:------------------------    
+    <script>
+        //defining Array
+        var geek=new Array(2);
+        var In=geek.length;
+        //Input
+        for(let i=0; i<=In; i++){
+            geek[i]=prompt("Enter Name:");
+        }
+        //Display Values
+        for(let i=0; i<=In; i++){
+            document.write(geek[i]+"<br>");
+        }
+    </script>
+
+=================================================================
+Multidimension Array
+=================================================================
+Multidimensional array is Arrays of Arrays.
+Multifimensional array can be 2D, 3D, 4D Etc.
+Ex:-
+      2D:- var name[[],[],[]]
+---------------------
+| Rahul | Dell | 10 |
+| Sonam | Hp   | 20 |
+| Sumit | Zed  | 30 |
+---------------------
+
+    <script>
+        var geek =[ 
+         ["Rahul","Dell",10],
+         ["Sonam","HP",20],
+         ["Sumit","Zed",30]
+        ];
+        for(let i=0; i<3; i++){
+            for(let j=0; j<3; j++){
+                document.write(geek[i][j]+ " ");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    you can write also like this:---
+ var geek =[[],[],[]];
+        geek[0][0] = "Rahul";
+        geek[0][1] = "Dell";
+        geek[0][2] = "30";
+        geek[1][0] = "Sonam";
+        geek[1][1] = "HP";
+        geek[1][2] = "20";
+        geek[2][0] = "Sumit";
+        geek[2][1] = "Zed";
+        geek[2][2] = "30";
+
+With Array:-------
+    <script>
+    
+        var geek = new Array (["Rahul","Dell",10],["Sonam","HP",20],["Sumit","Zed",30]);
+        for(let i=0; i<3; i++){
+            for(let j=0; j<3; j++){
+                document.write(geek[i][j]+ " ");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+===========================================================================
+Create Empty 2D Array
+===========================================================================
+    <script>
+        //using array literal
+        var geek=[[],[]];
+        //using array constructor
+        var geek = new Array([],[]);
+        for(let i=0; i<2; i++){
+            for(let j=0; j<3; j++){
+                document.write(geek[i][j]+ " ");
+            }
+            document.write("<br>");
+        }
+    </script>
+>change row with single key.
+        <script>
+        var geek =[];
+        var rows =4;
+        var cols =3;
+        for(var i=0; i<rows; i++){
+            geek[i]=[];
+        }
+        for(let i=0; i<rows; i++){
+            for(let j=0; j<cols; j++){
+                document.write(geek[i][j]+ " ");
+            }
+            document.write("<br>");
+        }
+    </script>
 
 
 

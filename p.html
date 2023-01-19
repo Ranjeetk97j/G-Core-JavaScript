@@ -8,10 +8,18 @@
 </head>
 <body>
     <script>
-        var geek=["Rahul","Ram",56,"Jay"];
-        var geek=new Array("Rahul","Ram",56,"Jay");
-        document.write(geek[3]);
+        var geek =[];
+        var rows =4;
+        var cols =3;
+        for(var i=0; i<rows; i++){
+            geek[i]=[];
+        }
+        for(let i=0; i<rows; i++){
+            for(let j=0; j<cols; j++){
+                document.write(geek[i][j]+ " ");
+            }
+            document.write("<br>");
+        }
     </script>
-    
 </body>
 </html>
