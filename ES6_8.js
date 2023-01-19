@@ -626,6 +626,64 @@ Create Empty 2D Array
         }
     </script>
 
+==================================================================
+Input From User In 2D Array
+==================================================================
+    <script>
+        //Defining 2D Array
+        var rows =3;
+        var cols =2;
+        var geek=new Array (rows);
+        for(var i=0; i<rows; i++){
+            geek[i]=new Array(cols);
+        }
+
+        //Input for Array
+        for(var i=0; i<rows; i++){
+            for (var j=0; j<cols; j++){
+                geek[i][j]=prompt("Enter Name:-");
+            }
+        }
+        //Displaying value
+        for(var i=0; i<rows; i++){
+            for(var j=0; j<cols; j++){
+                document.write(geek[i][j]+ " ");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 */
