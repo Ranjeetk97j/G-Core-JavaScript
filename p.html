@@ -7,12 +7,15 @@
     <title>Practice</title>
 </head>
 <body>
-    <script>
-        var geek=["Rahul","Sonam","Sumit","Rohit","Jitesh","Birender"];
-        var new_geek=geek.slice(1,3);
-        document.write(new_geek+"<br>");
-        var new_geek=geek.slice(-3,-2);
-        document.write(new_geek);
-    </script>    
+    <script>     
+       var a=4;
+       var b=8;
+       function myfun(say){
+        return say;
+       }
+       document.write(`${a+b} world`); //12 world Hello
+       document.write(`${myfun("Hello")} World`); //Hello World
+    </script>
+
 </body>
 </html>
