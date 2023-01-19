@@ -294,6 +294,72 @@ JavaScript returns "object" for arrays.
    document.write(typeof(stu));
 </script>
 
+===============================================================
+Declaration and Initialization of Array
+===============================================================
+>Using Array Literal
+Syntax:- var array_name=[value1, value2, value_n];
+Ex:-   var geek=["Rahul","Ram",56,"Jay"];
+
+var geek=[,,,,];  all values are undefined
+
+var geek=[,,,45,,,78];
+
+var a=10,b=20,c=30;
+var geek=[a,b,c];
+
+var geek=["Rahul","Ram",56,"Jay"];
+
+index       value
+geek[0]     Rahul
+geek[1]     Ram
+geek[2]     56
+geek[3]     jay
+
+Note:-By default, array starts with index 0.
+ex:-
+    <sctipt>
+        var geek=[]; // empty array
+        geek[0]="rahul";
+        geek[1]="ram";
+        geek[2]=56;
+        geek[3]="jay";
+        document.write(3);
+    </sctipt>
+
+ ex:-   
+    var geek=["rahul","ram",56,"jay"];
+    document.write(geek);
+
+Ex:-
+   var a=10,b=20,c=30;
+   var geek=[a,b,c];
+
+
+=============================
+Using Array Constructor
+=============================
+Syntax:- var array_name=new Array(value1, value2, value_n):
+Ex:-
+    var geel=new Array("Rahul","Ram",56,"Jay");
+    var geek=new Array(10,20,30,40,50);
+
+    <sctipt>
+        var geek = new Array(); // empty array
+        geek[0]="rahul";
+        geek[1]="ram";
+        geek[2]=56;
+        geek[3]="jay";
+        document.write(geek[3]);
+    </sctipt>
+
+    Ex:--
+    <script>
+        var geek=["Rahul","Ram",56,"Jay"];
+        var geek=new Array("Rahul","Ram",56,"Jay");
+        document.write(geek[3]);
+    </script>
+
 
 
 
