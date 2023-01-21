@@ -1,0 +1,907 @@
+String Length Property
+============================================================================
+Lenth property returns the lenth of a string.
+    <script>
+    var str="Hello GeekyShows";
+    //including space 
+    document.write(str.length);   //16  
+    </script>
+=============================================================================
+charAt Method
+=============================================================================
+charAt (position) method returns the character at a specified index
+(position) in a string.
+    <script>
+    var str="Hello GeekyShows";
+    document.write(str.charAt(9));   //k  
+    </script>
+=============================================================================
+charCodeAt Method
+=============================================================================
+charCodeAt (position) method returns the unicode of the character at a
+specified index in a string.
+    <script>
+    var str="Hello GeekyShows";
+    document.write(str.charCodeAt(2));   //108  
+    </script>
+=============================================================================
+toUpperCase() Method
+=============================================================================
+toUpperCase() method convert string to upper case
+    <script>
+    var str="Hello GeekyShows";
+    document.write(str.toUpperCase());   //HELLO GEEKYSHOWS
+    </script>
+=============================================================================
+toLowerCase() Method
+=============================================================================
+toLowerCase() Method convert string to Lower case
+var str="HELLO GEEKYSHOWS";
+document.write(str.toLowerCase()); //hello geekyshows
+=============================================================================
+trim Method
+=============================================================================
+trim() Method it removes white space from both side of string
+<script>
+var str="      Hello Geekyshows       "
+document.write(str.trim());  // Hello GeekyShows
+</script>
+=============================================================================
+replace Method
+=============================================================================
+replace (old, new) method replaces a specified value with another value in a 
+string, replace() function replaces only the first match.
+    <script>
+    var str="Hello GeekyShows";
+    document.write(str.replace("GeekyShows","World"));  
+    </script>
+=============================================================================
+split Method
+=============================================================================
+split() Method breaks the string up into separate string according to a
+delimeter passed as its first argument. The result is returned in an array.
+<script>
+var str="Hii guys Lets Learn JavaScript";
+var arr=srt.split(" ");
+document.write(arr);
+</script>
+<script>
+var str="Hii & guys & Lets & Learn & JavaScript";
+var arr=srt.split("&");
+document.write(arr);
+</script>
+==============================================================================
+indexOf() Method
+==============================================================================
+IndexOf() Method takes a string argument and returns the index of the first 
+occurance of the argument in the string. If the argument is not found returns -1.
+This method also accepts an optional second argument that specifies the index
+at which to start the search.
+The indexOf() method cannot take powerful search values (regular expressions).
+    <script>
+    var str="Hi guys Lets learn JavaScript";
+    document.write(str.indexOf("e"));  //9  
+    document.write("<br>");
+    document.write(str.indexOf("e",10)); //14
+    document.write("<br>");
+    document.write(str.indexOf("Lets"));  //8
+    </script>
+==============================================================================
+search Method
+==============================================================================
+The search () Method searches a string for a specified value and returns the 
+position of the match. 
+The search() method cannot take a second start position argument.
+    <script>
+        var str= "Hii guys Lets Learn JavaScript";
+        document.write(str.search("e")); //9
+        document.write("<br>");
+        document.write(str.search("Lets")); //8
+    </script>
+==============================================================================
+slice
+==============================================================================
+The slice() extracts a part of a string and returns the extracted part in a new
+string. The method takes 2 parameters: the starting index (position), and the 
+ending index (position). The method returns a string containing the string
+beginning at the given index up to but not including the character at the index
+specified by the second argument.If a parameter is negative, the position is 
+counted from the end of the string.
+    <script>
+        var str= "Hii guys Lets Learn JavaScript";
+        document.write(str.slice(8,14)); //Lets
+    </script>
+==============================================================================
+substring() Method
+==============================================================================
+The substring() is similar to slice(). The first argument specified the index
+at which the desired substring begins. The optional second argument indicates
+the index at which the desired substring ends. The method returns a string
+containing the substring beginning at the given index up to but not including
+the character at the index specified by the second argument. the difference
+between slice and substring is that substring() can not accept negative indexes.
+    <script>
+        var str= "Hii guys Lets Learn JavaScript";
+        document.write(str.substring(8,14)); //Lets
+        //14 not included
+        isme index count hota
+    </script>
+==============================================================================
+Substr() Method
+==============================================================================
+The substr() is similar to slice(). The substr() method returns the part of a
+string between the start index and a number of characters after it. substr() 
+extracts length characters from a string, countingg from the start indes. If 
+start is a positive number, the index starts counting at the start of the
+string. I start is a negative number, the index starts counting from the end of
+the string.
+    <script>
+        var str= "Hii guys Lets Learn JavaScript";
+        document.write(str.substr(8,8)); //Lets Le
+        //14 not included
+        //isme char count hota hai index nahi
+       </script>
+
+
+
+
+/*
+Number
+=========================================================================
+Number type in JavaScript includes both integer and floating point values.
+JavaScript numbers are always stored as double precision floating point
+numbers, following the international IEEE 754 standard.
+JavaScript also provide an object representation of numbers.
+Ex:-
+    12
+    23.45
+    5e3
+
+Primitive:-
+ var a=10;     //Whole Number          |
+ var a=10.45;  //Decimal Number        |----Number
+ var a=5e3;    //5000//5x10^3 exponent |
+ var a=34e-5;  //0.00034 exponent      |
+
+Constructor:-
+var a=new Number(10);   |
+var a=new Number(10.45);|--Object
+var a=new Number(5e3);  |
+
+Accessing Number:-
+=================
+var a=10;
+var a=10.45;
+var a=5e3;
+var a=34e-5;
+var a=new Number(10);
+var a=new Number(10.45);
+var a=new Number(5e3);
+
+document.write(a);
+
+    <script>
+        var a=10;
+        var b=10.45;
+        var c=5e3;
+        var d=34e-5;
+        var x=new Number(100);
+        document.write(a+"<br>");
+        document.write(b+"<br>");
+        document.write(c+"<br>");
+        document.write(d+"<br>");
+        document.write(x+"<br>");
+    </script>
+
+======================================================================
+Number with String
+======================================================================
+var a="50";  //String
+var b=10;    //Number
+var c=20;    //Number
+var d="Hello"; //String
+document.write(a+b); //5010
+document.write(a-b); //40
+document.write(b+c+c); //10+20+"50"=3050
+document.write(a+b+c); //"50"+10+20=501020
+var x="Result:"+b+c; //Result:1020
+
+    <script>
+        //Number with String
+        var a="50";
+        var b=10;
+        var c=20;
+        var d="Hello";
+        // + work as concat with string
+        document.write(b+c+"<br>"); //30
+        document.write(a+b+"<br>"); //5010
+        document.write(b+a+"<br>"); //1050
+        document.write(b+d+"<br>"); //10Hello
+        document.write(d+b+"<br>"); //Hello10
+        document.write("<br>");
+        //other than +
+        document.write(c-b+"<br>"); //10
+        document.write(a-b+"<br>"); //40
+        document.write(b-a+"<br>"); //-40
+        document.write(b-d+"<br>"); //NaN
+        document.write(d-b+"<br>"); //NaN
+        document.write("<br>");
+
+</script>
+
+===============================================================
+NaN in JavaScript
+===============================================================
+The NaN property represents "Not-a-Number" value. This property
+indicates that a value is not a legal number. NaN never compare 
+equal to anything, even itself.
+The NaN property is the same as the Number. Nan property.
+
+    <script>
+        //NaN(Not a Number)
+        var a="50";
+        var b=10;
+        var c=20;
+        var d="Hello";
+        document.write(b/d);
+    </script>
+
+================================================================
+NaN is not Equal to Anything
+================================================================
+
+    <script>
+       var a="hello";
+       document.write(isNaN(a));
+    </script>
+
+    <script>
+       if("Hello"==NaN){
+        document.write("Equal");
+       }else{
+        document.write("Not Equal");
+       }
+    </script>
+
+==========================================================================
+Global isNaN () Method
+==========================================================================
+The isNaN() function is used to determines whether a value is an illegal 
+number (Not-a-Number).
+This function returns true if the value equates to NaN. Otherwise it returns
+false.
+This function is different from the Number specific Number.isNaN() method.
+The global isNaN() function, converts the tested value to a Number, then
+tests it.
+Syntax:- isNaN(value)
+
+    <script>
+       //isNan()
+       var a="50";
+       var b=10;
+       var c=20;
+       var d="Hello";
+       document.write(isNaN(b));  //false
+    </script>
+    <script>
+       var a="50";
+       var b=10;
+       var c=20;
+       var d="Hello";
+       if(isNaN(a)){
+        document.write("Not Number");
+       }else{
+        document.write("Legal Number");
+       }
+    </script>
+
+=============================================================================
+Infinity and -Infinity
+=============================================================================
+Infinity or -Infinity is the value JavaScript will return if a number is too 
+large or too small. All infinity values compare equal to each other
+Ex:-
+    document.write(5/0);   //Infinity
+    document.write(-5/0);  //-Infinity
+
+    <script>
+        document.write(5/0+"<br>"); //Infinity
+        document.write(-5/0); //-Infinity
+    
+    </script>
+
+================================================================================
+Number Methods
+================================================================================
+* toString()
+* toExponential()
+* toFixed()
+* toPrecision()
+* valueOf()
+* isFinite()
+* isInteger()
+* isNan()
+* isSafeInteger()
+
+>toString():- toString() Method returns a number as a string in other words it
+              converts number into string. we can use this method to output numbers
+               as hexadecimal (16), octal(8), binary(2).
+Syntax:-  
+toString();
+Ex:-
+     var a=10;
+     document.write(a.toString());
+     document.write(a.toString(2)); //Binary of 10.  
+     
+    <script>
+        var a=10;
+        document.write(typeof(a)+"<br>");
+        document.write(typeof(a.toString()));
+    
+    </script>  
+
+=====================================================================================
+toExponential()
+=====================================================================================
+The toExponential() method converts a number into an exponential notation.
+Syntax:-
+Variable_name.toExponential(y)
+Where y is an integer between 0 and 20 representing the number of digits in the notation
+after the decimal point. If omitted, it is set to as many digits as necessary to represent
+the value.
+Ex:-
+var a=58975.98745;
+document.write(a.toExponential()+"<br>");
+document.write(a.toExponential(2)+"<br>");
+document.write(a.toExponential(4)+"<br>");
+
+======================================================================================
+toFixed()
+======================================================================================
+The toFixed() method converts a number into a string, keeping a specified number of 
+decimals also it rounds the decimal. If the desired number of decimals are higher than 
+the actual number, nulls are added to create the desire decimal length.
+Syntax:-
+a.toFixed(y)
+Where y is the number of digits after the decimal point. Default is 0(no digits after the
+    decimal point)
+Ex:-
+    var a=19.65823;
+    document.write(a.toFixed()+"<br>");
+    document.write(a.toFixed(2)+"<br>");
+    document.write(a.toFixed(4)+"<br>");
+    document.write(a.toFixed(8)+"<br>");    
+
+    <script>
+        var a=19.65823;
+         document.write(a.toFixed()+"<br>");
+         document.write(a.toFixed(2)+"<br>");
+         document.write(a.toFixed(4)+"<br>");
+         document.write(a.toFixed(8)+"<br>");    
+    </script>
+
+==========================================================================================================
+toPrecision()
+==========================================================================================================
+The toPrecision() method formats a number to a specified length. A decimal point and nulls are added(if needed),
+to create the specified length.
+Syntax:-
+Variable_name.toPrecision(y)
+Where y is the number of digits. If omitted, it returns the entire number (without any formating)
+Ex:-
+    var a=19.65823;
+    document.write(a.toPrecision()+"<br>");
+    document.write(a.toPrecision(2)+"<br>");
+    document.write(a.toPrecision(4)+"<br>");
+    document.write(a.toPrecision(9)+"<br>");
+    
+===========================================================================================================
+Number.isInteger()
+===========================================================================================================
+The Number.isInteger() method determines whether a value an integer. This method returns true if the value
+is of the type Number, and an integer, Otherwise it returns false.
+Ex:-
+document.write(Number.isInteger());     //false
+document.write(Number.isInteger(100));  //true
+document.write(Number.isInteger(-100)); //true
+document.write(Number.isInteger(100.45)); //false
+document.write(Number.isInteger(200-100)); //true
+document.write(Number.isInteger(0.1));     //false
+document.write(Number.isInteger("100"));   //false
+document.write(Number.isInteger("Hello")); //false
+
+============================================================================================================
+Number.isSafeInteger()
+============================================================================================================
+The Number.isSafeInteger() method determines whether a value is a safe integer. A safe integer is an integer
+that can be exactly all integers from (2^53-1)to-(2^53-1) This method returns true if the value is of thee type
+Number, and a safe integer. Otherwise it returns false.
+Ex:-
+Number.isSafeInteger(100) //true
+Number.isSafeInteger(-100) //true
+Number.isSafeInteger(0.1)  //false
+Number.isSafeInteger(56565545465252125212); //false
+
+==============================================================================================================
+Global JS Methods
+==============================================================================================================
+JavaScript global methods can be used on all JavaScript data types.
+>Number()
+>parseFloat()
+>parseInt()
+
+>Number()----------
+The Number() function converts the object argument to a number that represents the object's value.
+if the value cannot be converted to a legal number, NaN is returned.
+if the parameter is a Date object, the Number() function returns the number of milliseconds since midnight
+January 1, 1970 UTC.
+Ex:-
+    Number(True)
+    Number("100")
+    Number(100/"Hello")
+
+    <script>
+        var a=true;
+        var b=false;
+        var c=100;
+        var d="100";
+        var e="Hello";
+        var f=new Date();
+        document.write(Number(a)+"<br>"); //1
+        document.write(Number(b)+"<br>"); //0
+        document.write(Number(c)+"<br>"); //100
+        document.write(Number(d)+"<br>"); //100
+        document.write(Number(e)+"<br>"); //NaN
+        document.write(Number(f)+"<br>"); //1674267592926
+    </script>
+
+============================================================================================
+parseInt()
+============================================================================================
+The parseInt() function parses a string and returns an integer.
+Syntax:-
+        parseInt(string,radix)
+
+The radix parameter is used to specify which numeral system to be used, for example, a redix
+of 16 (hexadeximal) indicates that the number in the string should be parsed from a hexadecimal
+number to a decimal number.
+if the radix parameter is omitte, javascript assumes the following:
+> if the string begins with "0x", the radix is 16 (hexadecimal)
+> if the string begins with any other value, the radix is 10(decimal)
+Only the first numbebr in the string is returned.
+Leading and trailing spaces are allowed.
+if the first character cannot be converted to a number, parseInt() returns NaN.
+
+document.write(parseInt("10")+"<br>");   //10
+document.write(parseInt("12.00")+"<br>");  //12
+document.write(parseInt("15.45")+"<br>");  //15
+document.write(parseInt("10 20 30")+"<br>");  //10
+document.write(parseInt(" 90 ")+"<br>");   //90
+document.write(parseInt("10 years")+"<br>"); //10
+document.write(parseInt("years 10")+"<br>"); //NaN
+document.write(parseInt("020")+"<br>"); //20
+document.write(parseInt("12",8)+"<br>"); //10
+document.write(parseInt("0x12")+"<br>"); //18
+document.write(parseInt("10",16)+"<br>"); /16
+
+===================================================================================
+parseFloat()
+===================================================================================
+The parseFloat() function parses a string and returns a floating point number. This
+function determines if the ffirst character in the specified string is a number. If 
+it is, it parses the string until it reaches the end of the number, and returns the
+number as a number, not as a string.
+Syntax:-
+         parseFloat(string)
+>Only the first number in the string is returned!
+>Leading and trailing spaces are allowed.
+>if the first character cannot be converted to a number, parseFloat() returns NaN.
+   
+document.write(parseFloat("10")+"<br>");   //10
+document.write(parseFloat("12.00")+"<br>");  //12
+document.write(parseFloat("15.45")+"<br>");  //15.45
+document.write(parseFloat("10 20 30")+"<br>");  //10
+document.write(parseFloat(" 90 ")+"<br>");   //90
+document.write(parseFloat("10 years")+"<br>"); //10
+document.write(parseFloat("years 10")+"<br>"); //NaN
+document.write(parseFloat("020")+"<br>"); //20
+
+================================================================================================
+Math
+================================================================================================
+The math object holds a set of constants and methods that enable more complex mathematical operations
+than the basic arithmetic operators. We can not instantiate a Math Object. The Math object is static
+so it's properties and methods accessed directly.
+Ex:-
+     Math.PI
+     Mmath.abs()
+
+    <script>
+        document.write(Math.PI+"<br>"); //3.141592653589793
+        document.write(Math.sqrt(64)+"<br>"); //8
+        document.write(Math.abs(-64)+"<br>"); //64
+        document.write(Math.abs(null)+"<br>"); //0
+        document.write(Math.pow(2,3)+"<br>"); //8
+        document.write(Math.trunc(12.564)+"<br>"); //only integer part //12
+    </script>
+
+=======================================================================================================
+min() Method and max() Method
+=======================================================================================================
+<script>
+        document.write(Math.min(50,5,90,6,100)+"<br>"); //5
+        document.write(Math.max(50,5,90,6,100)+"<br>"); //100
+ </script>
+
+========================================================================================================
+floor() Method
+========================================================================================================
+The floor() method rounds a number DOWNWARDS to the nearest integer, and returns the result.
+document.write(Math.floor(2.1)+"<br>"); //2
+document.write(Math.floor(6.65)+"<br>"); //6
+document.write(Math.floor(0.4)+"<br>"); //0
+document.write(Math.floor(0.6)+"<br>"); //0
+document.write(Math.floor(-2.1)+"<br>"); //-3
+document.write(Math.floor(-6.65)+"<br>"); //-7
+
+==========================================================================================================
+round() Method
+==========================================================================================================
+The round() method rounds a number to the nearest integer. 6.4 will be rounded down, 6.5 will be rounded up.
+document.write(Math.round(2.1)+"<br>"); //2
+document.write(Math.round(6.4)+"<br>"); //6
+document.write(Math.round(6.5)+"<br>"); //7
+document.write(Math.round(6.6)+"<br>"); //7
+document.write(Math.round(0.4)+"<br>"); //0
+document.write(Math.round(0.5)+"<br>"); //1
+document.write(Math.round(-2.1)+"<br>"); //-2
+document.write(Math.round(-6.4)+"<br>"); //-6
+document.write(Math.round(-6.5)+"<br>"); //-6
+document.write(Math.round(-6.6)+"<br>"); //-7
+
+===========================================================================================================
+random() Method
+===========================================================================================================
+    <script>
+        document.write(Math.random()+"<br>");
+        document.write(Math.random()*10+"<br>");
+        var x=Math.floor(Math.random()*100+1); //within 100 will reflect
+        document.write(x); 
+    </script>
+
+===========================================================================================================
+Date
+===========================================================================================================
+The Date object provides a sophisticated set of methods for manipulating dates and times.
+>It reads client machine date and time so if the client's date or time is incorrect, your script will reflect
+ this fact.
+>Day of week and months of the year are enumerated beginning with zero.
+   0--Sunday, 1--Monday and so on.
+   0--January, 1--February and so on.
+>Days of month begins with One.
+===================================
+Creating Date Object
+===================================
+Date objects are created with the new Date() constructor. Date objects created by programmers are static. 
+They do not contain a ticking clock.
+Syntax:-
+new Date();
+new Date(Miliseconds);
+new Date(year,month, day, hours, minutes, seconds, milliseconds)
+new Date(dateString);
+
+============================================================================================================================
+new Date()
+=============================================================================================================================
+>new Date()- new Date() creates a new date object with the current date and time.
+Ex:-
+     var tarikh=new Date();
+     document.write(tarikh);
+
+    <script>
+        var tarikh=new Date();
+        document.write(tarikh);
+    </script>
+===============================================================================================================================
+new Date(Miliseconds)
+===============================================================================================================================
+>new Date(milliseconds)- It creates a new date object as January 1,1970, 00:00:00 Universal Time(UTC).
+Ex:-
+     var tarikh=new Date(8640000);
+     document.write(tarikh);
+
+    <script>
+        var tarikh1=new Date(1530867166586);
+        var tarikh2=new Date(8640000);
+        document.write(tarikh1+"<br>");
+        document.write(tarikh1+"<br>");
+    </script>
+
+===============================================================================================================================
+new Date(year,month, day, hours, minutes, seconds, milliseconds)
+===============================================================================================================================
+It creates object with the date specified by the integer values for the year, month, day, hours, minutes, second, milliseconds.
+You can omit some of the arguments.
+Ex:-
+    <script>
+    var tarikh1=new Date(2018,4,25,9,45,35,0);
+    var tarikh2=new Date(2018,4,25,9,45,35);
+    var tarikh3=new Date(2018,4,25,9,45);
+    var tarikh4=new Date(2018,4,25,9);
+    var tarikh5=new Date(2018,4,25);
+    var tarikh6=new Date(2018,4);
+    var tarikh7=new Date(8640000);
+      document.write(tarikh1+"<br>");
+      document.write(tarikh2+"<br>");
+      document.write(tarikh3+"<br>");
+      document.write(tarikh4+"<br>");
+      document.write(tarikh5+"<br>");
+      document.write(tarikh6+"<br>");
+    </script>
+
+  Month and Week Day start with 0
+  0- Sunday
+  0- January
+  Month Day start with 1
+  1-1
+
+=======================================================================================================
+new Date(dateString); 
+=======================================================================================================
+>new Date(dateString)- new Date(dateString) creates a new date object from a date string.
+Ex:-
+     var tarikh=new Date("May 12, 2018 10:16:05");
+
+    <script>
+        //0- sunday, 1-Monday and so on
+        //0- january 1-Feb and so on
+        var tarikh1= new Date("May 12, 2018 10:16:05");
+        document.write(tarikh1 + "<br>");
+    </script>     
+
+Date Type   |  Format    |     Example   |
+ ISO Date   | YYYY-MM-DD |  "2018-06-21" |
+ Short Date | MM/DD/YYYY |   "06/21/2018"|
+ Long Date  | MMM DD YYYY|  "June 21 2018 or "21 June 2018" |
+
+=============================================================================
+ISO Dates
+=============================================================================
+ISO 8601 is the international standard for the representation of dates and times.
+
+
+Year and Month      YYYY-MM       2018-06
+   Only Year         YYYY         2018
+   Date and Time     YYYY-MM-DDTHH:MM:SSZ  2018-06-21T12:00:00Z
+   Date and Time    YYYY-MM-DDTHH:MM:SS+HH:MM  2018-06-21T12:00+06:30
+                    YYYY-MM-DDTHH:MM:SS-HH:MM  2018-06-21T12:00-06:30
+
+Date and Time is separated with a capital T.
+UTC Time is defined with a capital letter Z.
+If you want to modify the time relative to UTC, remove the Z and add +HH:MM or-HH:MM
+instead.
+
+    <script>
+        //0- sunday, 1-Monday and so on
+        //0- january 1-Feb and so on
+        var tarikh1= new Date("2018-06");
+        var tarikh2= new Date("2018-06-21T12:00:00+06:30");
+        document.write(tarikh1 + "<br>");
+        document.write(tarikh2)
+    </script>
+
+===============================================================================================================
+Short Date
+===============================================================================================================
+>Short dates are written with an "MM/DD/YYYY" format.
+>In some browsers, months or days with no leading zeroes may produce an error.
+>The behavior of "YYYY/MM/DD" is undefined. Some browsers will try to guess the format. Some will return NaN.
+>The behavior of "DD-MM-YYYY" is also undefined. Some browsers will try to guess the format. Some will return NaN.
+
+    <script>
+        //0- sunday, 1-Monday and so on
+        //0- january 1-Feb and so on
+        var tarikh1= new Date("06-25-2018");
+        document.write(tarikh1 + "<br>");
+    </script>
+
+================================================================================================================
+Long Date
+================================================================================================================
+>Long dates are most often written with a "MMM DD YYYY" format.
+>Month and day can be in any order.
+>Month can be written in full (january), or abbreviated (Jan).
+>If you write "June,21,2018" commas are ignored and Names are case insensitive.
+
+    <script>
+        //0- sunday, 1-Monday and so on
+        //0- january 1-Feb and so on
+        var tarikh1= new Date("March 25 2018");
+        document.write(tarikh1 + "<br>");
+    </script>
+
+==================================================================================================================
+Set Date Methods
+==================================================================================================================
+> setDate()          Set the day as a number(1-31)
+> setFullYear()      Set the year (optionally month and day)
+> setHours()         Set the hour(0-23)
+> SetMilliseconds()  Set the milliseconds(0-999)
+> SetMinutes()       Set the minutes(0-59)
+> setMonth()         Set the month (0-11)
+> setSecond()        Set the seconds(0-59)
+> setTime()          Set the time(milliseconds since january 1,1970)
+
+
+    <script>
+        var tarikh = new Date();
+        document.write(tarikh + "<br>");
+
+        tarikh.setHours(22);
+        document.write(tarikh+"<br>");
+
+        tarikh.setMinutes(56);
+        document.write(tarikh + "<br>");
+
+        tarikh.setSeconds(40);
+        document.write(tarikh+"<br>");
+
+        tarikh.setDate(26);
+        document.write(tarikh+"<br>");
+
+        tarikh.setMonth(11);
+        document.write(tarikh+"<br>");
+
+        tarikh.setFullYear(2020);
+        document.write(tarikh+"<br>");
+
+        tarikh.setFullYear(2022,3,15);
+        document.write(tarikh+"<br>");
+
+    </script>
+
+==========================================================================================================
+Get Date Methods
+==========================================================================================================
+>getFullYear()        Get the year as a four digit number(yyyy)
+>getMonth()           Get the month as a number(0-11)
+>getDate()            Get the day as a number(1-31)
+>getHours()           Get the hour(0-23)
+>getMinute()          Get the minute(0-59)
+>getSeconds()         Get the second(0-59)
+>getMilliseconds()    Get the millisecond(0-999)
+>getTime()            Get the time(milliseconds since January 1,1970)
+>getDay()             Get the weekday as a number(0-6)
+
+
+    <script>
+        var tarikh=new Date();
+        document.write(tarikh + "<br>");
+        document.write("Hours:" + tarikh.getHours()+"<br>");
+        document.write("Minutes:" + tarikh.getMinutes()+"<br>");
+        document.write("Second:" + tarikh.getSeconds()+"<br>");
+        document.write("Date:" + tarikh.getDate()+"<br>");
+        document.write("Month:" + tarikh.getMonth()+"<br>");
+        document.write("Year:" + tarikh.getFullYear()+"<br>");
+        document.write("Day:" + tarikh.getDay()+"<br>");
+
+    </script>
+
+=============================================================================================================
+Retrieve Month Name and Day Name
+=============================================================================================================
+//Week Day as Number 0-6 ex- 0=sun
+
+    <script>
+        var tarikh=new Date();
+        var month=tarikh.getMonth();
+        var day=tarikh.getDay();
+        document.write(getMonthName(month)+"<br>");
+        document.write(getDayName(day)+"<br>");
+
+        function getMonthName(monthnumber){
+        var monthname=["January","February","March","April","May",
+            "June", "July","August","September","October",
+            "November","December"];
+            return monthname[monthnumber];
+        }
+        
+        function getDayName(daynumber){
+            var dayname=["Sunday","Monday","Tuesday","Wednesday",
+        "Thursday","Friday","Satuarday"];
+        return dayname[daynumber];
+
+        }
+    </script>
+
+===============================================================================================
+Format Date and Time
+===============================================================================================
+Day as Number 1-31
+Hours as Number 0-23
+Month as Number 0-11 Ex:- 0 = Jan
+Week Day as Number 0-6 Ex:- 0= Sun
+
+<script>
+        var tarikh=new Date();
+        document.write(formatDate(tarikh)+"<br>");
+
+            function formatDate(pd){
+            var date=pd.getDate();
+            var month=pd.getMonth();
+            month++;
+            var year=pd.getFullYear();
+            return date+"-"+month+"-"+year;
+}
+    </script>
+
+==============================================================================================
+Converting Dates to String
+==============================================================================================
+If you want to create a string in a starndar format, Date provides three methods:-
+
+>toString()
+>toUTCString()
+>toGMTString()
+
+toUTCString() and toGMTString() format the string according to internet(GMT) starndards, whereas
+toString() creates the string according to Local Time.
+
+    <script>
+        var tarikh = new Date();
+        document.write(tarikh.toString()+"<br>");
+        document.write(tarikh.toUTCString()+"<br>");
+        document.write(tarikh.toGMTString()+"<br>");
+        
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
